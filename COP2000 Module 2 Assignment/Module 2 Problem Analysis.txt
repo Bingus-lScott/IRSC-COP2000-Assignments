@@ -1,0 +1,77 @@
+﻿⦁	Data Tracing Chart (1pt): a table used to track the values of variables during a desk check.
+⦁	Test Softcopy (.5 pt): a simulation of the screen's appearance during a desk check.
+
+Problem Statement: 
+Ask the user for the number of seats purchased for each of the following types of seating: Balcony, Grand Tier, Loge, Mezzanine, and Orchestra; and then record each value 
+inputed into it's own respective variable. After assigning values to the seating variables, initalize new variables for totals. I will state each respective type of seating's
+pricing: 
+Balcony - $50
+Grand Tier - $175.25
+Loge - $125
+Mezzanine - $100
+Orchestra - $230.50
+Multiply the number of seats sold by the pricing and assign that value to a total value for each of the stated categories of seating.
+Then, display a name for the theatre (of your choice) and seperate the title with a line of dashes/hyphens the same length the title reaches. 
+Below the line break, each in a seperate line, state the type of seating immediately followed by a colon, 1-2 tabs (for equal whitespace), and the total price of all tickets sold in that
+category each in a new line.
+(example:
+Balcony:		$5000
+Grand Tier:		$50,000)
+Following the sublimation of each respective totals, caclulate a grand title and format it the same as the previous totals but title it "Total Sales:".
+
+Sample Softcopy: (example values, not real)
+
+Grand Theadore Theatre Ticket Sales
+-----------------------------------
+Balcony:		$5000
+Grand Tier:		$500000
+Loge:			$650000
+Mezzanine:		$100000000
+Orchestra:		$1243545666789090966
+Total Sales:	$-1
+
+Symbolic Constant:
+Balcony Seating Price: $50.00
+Grand Tier Seating Price: $175.25
+Loge Seating Price: $125.00
+Mezzanine Seating Price: $100.00
+Orchestra Seating Price: $230.50
+
+Variable List:
+balconySeatsPurchased
+gtSeatsPurchased
+logeSeatsPurchased
+mezzSeatsPurchased
+orchSeatsPurchased
+
+balconyTotal
+gtTotal
+logeTotal
+mezzTotal
+orchTotal
+grandTotal
+
+Pseudo Code:
+Define constant pricing for each seating type
+Define seatsPurchased variables for each seating type
+Define total variables for each seating type
+Ask the user for the number of balcony seats sold
+Collect submitted value and store it in variable
+Calculate the total for balcony seating
+Ask the user for the number of grand tier seats sold
+Collect submitted value and store it in variable
+Calculate the total for grand tier seating
+Ask the user for the number of loge seats sold
+Collect submitted value and store it in variable
+Calculate the total for loge seating
+Ask the user for the number of mezzanine seats sold
+Collect submitted value and store it in variable
+Calculate the total for mezzanine seating
+Ask the user for the number of orchestra seats sold
+Collect submitted value and store it in variable
+Calculate the total for orchestra seating
+Calculate the grand total using all the other totals
+Output title block
+Output each seating type's total
+Output grand total
+
