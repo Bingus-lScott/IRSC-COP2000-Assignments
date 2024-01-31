@@ -1,7 +1,4 @@
-﻿⦁	Data Tracing Chart (1pt): a table used to track the values of variables during a desk check.
-⦁	Test Softcopy (.5 pt): a simulation of the screen's appearance during a desk check.
-
-Problem Statement: 
+﻿Problem Statement: 
 Ask the user for the number of seats purchased for each of the following types of seating: Balcony, Grand Tier, Loge, Mezzanine, and Orchestra; and then record each value 
 inputed into it's own respective variable. After assigning values to the seating variables, initalize new variables for totals. I will state each respective type of seating's
 pricing: 
@@ -74,4 +71,3 @@ Calculate the grand total using all the other totals
 Output title block
 Output each seating type's total
 Output grand total
-
