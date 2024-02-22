@@ -3,6 +3,12 @@ using namespace std;
 
  int main(){
 
+// The cin number variables, declared once
+  double num1;
+  double num2;
+  
+  int operation;
+
    // Title Block
   cout << "Architect Area Calculator:\n"
        << "***********************\n"
@@ -16,12 +22,7 @@ using namespace std;
   cout << "Please enter a menu item (1-4) > ";
 
    // Get the operation
-  int operation;
   cin >> operation;
-
-   // The cin number variables, declared once
-   double num1;
-   double num2;
    
   // Swtich statement for all the diffrent operations
   switch(operation){
