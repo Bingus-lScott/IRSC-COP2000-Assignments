@@ -1,0 +1,10 @@
+frying pan 24.99 15 0
+twig table 200 10 1
+putty fork 0.50 500 1
+foo bar 39.99 25 0
+stone bottle 600 1 1
+iron dresser 25 15 0
+flower pot 1.75 68 1
+gold pillow 9.99 2 0
+wire desk 30 30 0
+wall bowl 18.67 15 0
