@@ -27,44 +27,66 @@ int main(){
 
     // If true, the do while loop doesn't continue next itieration
     bool exit = false;
+    // won't allow you to input 2 or 3 if you haven't read the inventory first
+    bool inventoryRead = false;
     // The user's input
     int input;
-
+    
     do {
         logo();
         menu();
         cin >> input;
 
-        switch(input){
-            // Read Inventory
-            case 1:
-            // Reads the inventory, if it returns true then there was an error reading the file
-                if(readInventory(itemNames, itemCost, itemNoShip, canShip)){
-                    cout << "\nThere was an error opening inputInventory.txt, Exiting Program...";
-                    return 1;
-                }
-            break;
+        // input validation. Only allow numbers through
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "You have entered an invalid input, please try again...";
+            continue;
+        }
+        else{
+            switch(input){
+                // Read Inventory
+                case 1:
+                // Reads the inventory, if it returns true then there was an error reading the file
+                    if(readInventory(itemNames, itemCost, itemNoShip, canShip)){
+                        cout << "\nThere was an error opening inputInventory.txt, Exiting Program...";
+                        return 1;
+                    }
+                    inventoryRead = true;
+                break;
 
-            // Display Inventory
-            case 2:
-                displayInventory(itemNames, itemCost, itemNoShip, canShip);
-            break;
+                // Display Inventory
+                case 2:
+                    if(!inventoryRead){
+                        cout << "You have not yet read the inventory, please read the inventory first...";
+                    }
+                    else{
+                        displayInventory(itemNames, itemCost, itemNoShip, canShip);
+                    }
+                break;
 
-            // Write to File
-            case 3:
-                writeFile(itemNames, itemCost, itemNoShip, canShip);
-            break;
+                // Write to File
+                case 3:
+                    if(!inventoryRead){
+                        cout << "You have not yet read the inventory, please read the inventory first...";
+                    }
+                    else{
+                        writeFile(itemNames, itemCost, itemNoShip, canShip);
+                    }
+                break;
 
-            // Exit
-            case 4:
-                exit = true;
-            break;
+                // Exit
+                case 4:
+                    exit = true;
+                break;
 
-            // default case- if something undefined is entered
-            default:
-                cout << "You have entered an invalid option. Please try again..." << endl;
-                continue;
-            break;
+                // default case- if something undefined is entered
+                default:
+                    cout << "You have entered an invalid option. Please try again..." << endl;
+                    continue;
+                break;
+            }
         }
     } while (!exit);
 
@@ -73,6 +95,7 @@ int main(){
 
 // Prints the company logo out to console using a series of couts
 void logo(){
+ 
     cout << "    Indiana Operations" << endl;
     cout << "************  ************" << endl;
     cout << "************  ************" << endl;
@@ -129,11 +152,11 @@ bool readInventory(string itemNames[], double itemCost[], int itemNoShip[], int 
 // Prints the inventory stored in the arrays to the console
 void displayInventory(string itemNames[], double itemCost[], int itemNoShip[], int canShip[]){
     // Table labels
-    cout << "Item Name              Cost                  No. Stock              Shipping (1-Yes 0-No)" << endl;
+    cout << "Item Name" << setw(10) << "Cost" << setw(15) << "No. Stock" << setw(25) << "Shipping (1-Yes 0-No)" << endl;
     
     // loops through each variable's data and displays it
     for(int i = 0; i < 10; i++){
-        cout << itemNames[i] << "               " << itemCost[i] << "                    " << itemNoShip[i] << "                              " << canShip[i] << endl << endl << endl;
+        cout << itemNames[i] << setw(10) << itemCost[i] << setw(15) << itemNoShip[i] << setw(25) << canShip[i] << endl << endl << endl;
     }
 }
 
@@ -145,7 +168,7 @@ void writeFile(string itemNames[], double itemCost[], int itemNoShip[], int canS
 
     // loops through the arrays and prints out their values
     for(int i = 0; i < 10; i++){
-        outputFile << itemNames[i] << "               " << itemCost[i] << "                    " << itemNoShip[i] << "                              " << canShip[i] << endl << endl;
+        outputFile << itemNames[i] << setw(10) << itemCost[i] << setw(15) << itemNoShip[i] << setw(25) << canShip[i] << endl << endl;
     }
 
     // closes the file
