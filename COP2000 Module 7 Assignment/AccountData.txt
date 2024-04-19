@@ -1,0 +1,5 @@
+bham@gnet.com	Blake	Ham	squid62	1987	U	Teacher
+jdark@att.net	Jim	Dark	gymrat32	1985	A	Master
+hgreen@lakes.net	Hannah	Green	flower22	2007	U	Apprentice
+tsmith@dna.com	Tom	Smith	tuna20	2000	U	Teacher
+jarrow@pnet.com	James	Arrow	ahoy10	2005	U	Apprentice
