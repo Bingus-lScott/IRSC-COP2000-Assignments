@@ -2,7 +2,8 @@
 Landon Scott
 COP2000
 4-18-24
-Purpose: 
+Purpose: Create a command prompt sign-in for users to check their account information by entering their account sign-in details. If the user
+is an admin, let them see the whole server's account details.
 */
 
 // Include Functions
@@ -66,7 +67,7 @@ int main() {
         if(accounts[row][5] == "U") {
             cout << "\n";
             for(int iterator = 0; iterator < 7; ++iterator) {
-                cout << accounts[row][iterator] << std::setw(10);
+                cout << std::setw(17) << accounts[row][iterator];
             }
             cout << "\n" << std::endl;
         } else {
